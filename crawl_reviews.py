@@ -7,9 +7,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 
-driver = webdriver.Edge('msedgedriver.exe')
+driver = webdriver.Chrome()
 
-df = pd.read_csv('paperlist.tsv', sep='\t', index_col=0)
+df = pd.read_csv('paperlist23.tsv', sep='\t', index_col=0)
 
 ratings = dict()
 decisions = dict()
