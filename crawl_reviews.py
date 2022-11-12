@@ -19,7 +19,8 @@ def retry(dr, time, cond, maxtime):
     try:
         WebDriverWait(dr, time).until(cond)
     except:
-        retry(dr, 10, cond, maxtime-1)
+        if maxtime > 0:
+            retry(dr, 10, cond, maxtime-1)
 
 
 
